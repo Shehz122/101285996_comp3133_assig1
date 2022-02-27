@@ -1,0 +1,210 @@
+{
+	"info": {
+		"_postman_id": "c1d5448a-5354-4149-abaa-09fbb8a080b5",
+		"name": "101285996_comp3133_assig1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "TocreateAdmin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation{\r\n  addUser(\r\nusername: \"Harvey1\"\r\nfirstname: \"Harvey\"\r\nlastname: \"Specter\"\r\npassword: \"test123\"\r\nemail: \"harvey123@gmail.com\"\r\ntype: \"admin\"\r\n  ){\r\n    id\r\nusername\r\nfirstname\r\nlastname\r\npassword\r\nemail\r\ntype\r\n  }\r\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/graphql",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TocreateCustomer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation{\r\n  addUser(\r\nusername: \"Peakyblinders\"\r\nfirstname: \"Shaw\"\r\nlastname: \"Scott\"\r\npassword: \"123\"\r\nemail: \"she@gmail.com\"\r\ntype: \"customer\"\r\n  ){\r\n    id\r\nusername\r\nfirstname\r\nlastname\r\npassword\r\nemail\r\ntype\r\n  }\r\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/graphql",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation{\r\n  login(\r\nusername: \"harvey1\"\r\npassword: \"test123\"\r\n  )\r\n  \r\n  \r\n  \r\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/graphql",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ToaddListing",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation {\r\n  addListing(\r\n    listing_id: \"List2\"\r\n    listing_title: \"Niagra Hills\"\r\n    description: \"Beautiful Homes\"\r\n    street: \"67 Heaven Avenue\"\r\n    city: \"Niagra\"\r\n    postal_code: \"758YUI\"\r\n    price: 1300\r\n    email: \"hea1venavenue@gmail.com\"\r\n    username: \"Harvey\"\r\n  ) {\r\n    id\r\n    listing_id\r\n    listing_title\r\n    description\r\n    street\r\n    city\r\n    postal_code\r\n    price\r\n    email\r\n    username\r\n  }\r\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/graphql",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TogetListing",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query{\r\n  getListing(username:\"Harvey\"){\r\n    id\r\n    listing_id\r\n    listing_title\r\n    description\r\n    street\r\n    city\r\n    price\r\n    email\r\n    username\r\n    \r\n  }\r\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/graphql",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ToBook",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation{\r\n  addBooking(\r\n    listing_id:\"List2\"\r\n    booking_id:\"Book2\"\r\n    booking_start:\"03-03-2022\"\r\n    booking_end:\"05-03-2022\"\r\n    username:\"Peakyblinders\"\r\n  ){\r\n    listing_id\r\n    booking_id\r\n    booking_date\r\n    booking_start\r\n    booking_end\r\n    username\r\n  }\r\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/graphql",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ToSearchByName",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/graphql",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ToSearchByPostalCode",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query{\r\n  getListingByPostalCode(postal_code:\"758YUI\")\r\n  {\r\n    id\r\n    listing_id\r\n    listing_title\r\n    description\r\n    street\r\n    city\r\n    postal_code\r\n    price\r\n    email\r\n    username\r\n  }\r\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/graphql",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

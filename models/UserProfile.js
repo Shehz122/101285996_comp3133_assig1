@@ -24,10 +24,8 @@ const UserSchema = new mongoose.Schema({
       password:{
         type: String,
         required: [true, 'Please enter your password'],
-        validate: function (value) {
-            var passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[#$&_])[A-Za-z\d#$&_]{0,6}$/;
-            return passwordRegex.test(value);
-        }
+        match: [/^[A-Za-z0-9#$&_]+$/, 'Password must be min 6 characters length and can contain only upper/lower alphabets, 0-9, #, $, &, _'],
+
     },
       email: {
         type: String,

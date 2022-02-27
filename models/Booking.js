@@ -11,12 +11,17 @@ const bookingSchema = new mongoose.Schema({
     },
     booking_date: {
         type: Date,
+        required: true,
+        default: Date.now,
+
     },
     booking_start: {
         type: Date,
+        required: true
     },
     booking_end: {
         type: Date,
+        required: true
     },
     username: {
         type: String,
